@@ -1,9 +1,22 @@
 ** TODO / Roadmap **
 
 1.10.8
+	so many people have problems with bgmpData undefined, or the js/css not being enqueued
+		output bgmpData and enqueue the js from the shortcode itself, so it's 100% reliable
+		just output the css all the time?
+
 	move settings into tabs - basic, cluster, api keys
 
 1.10.2
+	implement the new deprecated hooks feature
+		https://core.trac.wordpress.org/ticket/10441
+
+1.minor.x
+	remove local localizations and load_text_domain() etc
+		https://make.wordpress.org/core/2016/07/06/i18n-improvements-in-4-6/
+
+	other improvements from 2.x branch?
+
 	http://make.wordpress.org/plugins/2013/04/11/google-maps-javascript-v2-api-to-be-removed/
 		pretty sure it's already using v3, but double check
 		probably specify api version # in the url, to make it obvious and future-proof

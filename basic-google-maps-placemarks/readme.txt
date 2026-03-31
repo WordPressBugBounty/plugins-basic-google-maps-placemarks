@@ -3,8 +3,8 @@ Contributors:      iandunn
 Donate link:       http://www.doctorswithoutborders.org
 Tags:              map, google maps, marker, placemark, geocode, shortcode, marker clustering
 Requires at least: 3.1
-Tested up to:      4.8
-Stable tag:        1.10.7
+Tested up to:      6.9
+Stable tag:        1.10.8
 License:           GPL2
 
 Embeds a Google Map into your site and lets you add map markers with custom icons and information windows.
@@ -401,6 +401,9 @@ If you make customizations that could be beneficial to other users, please start
 
 == Changelog ==
 
+= v1.10.8 (3/31/2026) =
+* [SECURITY] Fixed an unauthenticated arbitrary map-coordinate write vulnerability. An unauthorized person could alter the map's center location. Capability and nonce checks were added to fix it. props [pwnie](https://hackerone.com/pwnie?type=user) for [responsible disclosure](https://hackerone.com/reports/3452008).
+
 = v1.10.7 (8/19/2016) =
 * [NEW] Added UI options and filters for entering a Google API keys.
 
@@ -445,6 +448,9 @@ Older entries are in docs/changelog.txt
 
 
 == Upgrade Notice ==
+
+= 1.10.8 =
+BGMP 1.10.8 fixes a security vulnerability that allowed unauthenticated visitors to alter the map's stored coordinates. All users should upgrade immediately.
 
 = 1.10.7 =
 BGMP 1.10.7 allows you to enter a Google Maps API key, which is sometimes necessary for the map to work.

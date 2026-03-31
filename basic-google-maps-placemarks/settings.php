@@ -78,6 +78,14 @@ if ( ! class_exists( 'BGMPSettings' ) ) {
 			// @todo - this could be done during a settings validation callback?
 			global $bgmp;
 
+			if ( ! current_user_can( 'manage_options' ) ) {
+				return;
+			}
+
+			if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], BasicGoogleMapsPlacemarks::PREFIX . 'settings-options' ) ) {
+				return;
+			}
+
 			$haveCoordinates = true;
 
 			if ( isset( $_POST[ BasicGoogleMapsPlacemarks::PREFIX . 'map-address' ] ) ) {
